@@ -82,36 +82,7 @@ elif data_option == "FILTERED data":
         )
         st.image(wordcloud.to_array())
 
-        def word_frequency(text):
-            # Tokenize the text into words
-            words = word_tokenize(text.lower())
-
-            # Remove stop words
-            stop_words = set(stopwords.words("english"))
-
-            # Remove full stops and commas
-            words = [
-                word for word in words if word not in stop_words and word.isalnum()
-            ]
-
-            # Count the frequency of each word
-            word_counts = Counter(words)
-
-            return word_counts
-
-        # Choosing abstract/text of interest to process
-        text = df_filt2["Abstract"][selected_option]
-        word_counts = word_frequency(text)
-
-        # Convert word_counts dictionary to DataFrame
-        expl = pd.DataFrame(
-            word_counts.items(), columns=["word", "frequency"]
-        ).sort_values("frequency", ascending=False)
-        expl["relative (%)"] = np.round(
-            expl["frequency"] / expl["frequency"].sum() * 100, 2
-        )
-        st.write(f"Total words (cleaned): {expl['frequency'].sum()}")
-        st.write(expl)
+        
     else:
         st.subheader(
             "Abstract not processed. Please, choose another option from the data selector."
