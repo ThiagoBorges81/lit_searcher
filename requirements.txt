@@ -2,4 +2,4 @@ matplotlib == 3.8.3
 requests == 2.31.0
 pymed == 0.8.9
 wordcloud == 1.9.3
-nltk == 3.8.1
+nltk
