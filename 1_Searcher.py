@@ -266,4 +266,4 @@ if search_terms:
 
         if 'filtered_data' not in st.session_state:
             st.session_state['filtered_data'] = None
-            st.session_state['filtered_data'] = filtered_data.reset_index()
+            st.session_state['filtered_data'] = filtered_data
