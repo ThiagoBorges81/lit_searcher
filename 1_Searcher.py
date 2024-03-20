@@ -6,7 +6,7 @@ import numpy                as np
 import requests
 import json
 import time
-
+import matplotlib.pyplot    as plt
 from pymed          import PubMed
 from wordcloud      import WordCloud
 
