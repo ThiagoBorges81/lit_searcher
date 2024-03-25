@@ -264,7 +264,7 @@ if search_terms:
         st.write(filtered_data)
         st.subheader(f"Filtering has narrowed the RAW data to {filtered_data.shape[0]} references")
         st.write('')
-        st.subheader('Finished searching for references? Please, go to the individual search page for further processing.')
+        st.subheader('Finished searching for references? Please, select the dislay filtered data below for individual search page and further processing.')
 
     #####################
     #INDIVIDUAL SEARCHER#
