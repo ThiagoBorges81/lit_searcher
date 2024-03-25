@@ -277,7 +277,7 @@ if search_terms:
         
         options = range(0, filtered_data.shape[0] + 1, 1)
         selected_option = st.selectbox(
-            "Select an Abstract from the FILTERED data for detailed view:", options
+            "Select an Abstract from the FILTERED data for detailed view.\nChoose your abstract of interest based on the number in the first column of the filtered data table:", options
         )
 
         if filtered_data["Abstract"][selected_option]:
