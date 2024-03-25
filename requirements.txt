@@ -1,5 +1,4 @@
 requests
-json
 time
 wordcloud
 nltk
