@@ -315,15 +315,6 @@ if search_terms:
             # Choosing abstract/text of interest to process
             text = filtered_data["Abstract"][selected_option]
             word_counts = word_frequency(text)
-
-            # Convert word_counts dictionary to DataFrame
-            expl = pd.DataFrame(
-                word_counts.items(), columns=["word", "frequency"]
-            ).sort_values("frequency", ascending=False)
-            expl["relative (%)"] = np.round(
-                expl["frequency"] / expl["frequency"].sum() * 100, 2
-            )
-            st.write(f"Total words (cleaned): {expl['frequency'].sum()}")
             st.write(expl)
     else:
         st.subheader(
